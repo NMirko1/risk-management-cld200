@@ -26,11 +26,10 @@ stages:
   steps:
     cloudFoundryDeploy:
       cloudFoundry:
-        cfApiEndpoint: "https://api.cf.eu10.hana.ondemand.com"
-        cfOrg: "CLD200-CF-A08"
-        cfSpace: "dev"
-        cfCredentialsId: "cfdeploy"
-        appName: ""
+        apiEndpoint: 'https://api.cf.eu10.hana.ondemand.com' # default: 'https://api.cf.eu10.hana.ondemand.com'
+        org: '3e5e39e4-2524-4bf1-8979-2fd6bb968a7e'
+        space: 'dev'
+        credentialsId: 'cfdeploy'
       mtaDeployParameters: "-f --version-rule ALL"
     artifactPrepareVersion:
       versioningType: "cloud_noTag"
